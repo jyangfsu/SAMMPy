@@ -8,6 +8,8 @@ assistance is welcomed. Please email us if you want to
 contribute.
 
 """
+__name__ = 'sammpy'
+__author__ = 'Jing Yang, and Ming Ye'
 
 from SALib.sample import saltelli
 

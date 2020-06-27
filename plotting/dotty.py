@@ -7,7 +7,7 @@ Created on Thu Jun 25 21:52:56 2020
 import numpy as np
 import matplotlib.pyplot as plt
 
-def dottyplot(model, Ret):
+def plot(model, Ret):
     '''
     Plots mean against variance of the output difference
 
@@ -27,9 +27,10 @@ def dottyplot(model, Ret):
 
     plt.scatter(Ret['mean'], Ret['variance'])
     for i in range(len(model.frames['names'])):
-        plt.text(Ret['mean'][i], Ret['variance'][i], model.frames['names'][i])
-    plt.xlabel('Mean')
-    plt.ylabel('Variance')
+        plt.text(Ret['mean'][i], Ret['variance'][i], model.frames['names'][i],
+                 fontsize=14)
+    plt.xlabel('Mean', fontsize=14)
+    plt.ylabel('Variance', fontsize=14)
     
     plt.show()
     return 

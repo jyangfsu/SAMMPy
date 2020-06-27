@@ -7,7 +7,7 @@ Created on Thu Jun 25 20:26:55 2020
 import numpy as np
 import matplotlib.pyplot as plt
 
-def barplot(model, Ret):
+def plot(model, Ret):
     '''
     Create bar chart of variance-based sensitivity results
 
@@ -22,13 +22,13 @@ def barplot(model, Ret):
     
     plt.subplot(1, 2, 1)
     plt.bar(x, Ret['PSK'])
-    plt.xticks(x, model.frames['names'])
+    plt.xticks(x, model.frames['names'], fontsize=14)
     plt.ylabel('First-order process sensitivity')
         
         
     plt.subplot(1, 2, 2)
     plt.bar(x, Ret['PSTK'])
-    plt.xticks(x, model.frames['names'])
+    plt.xticks(x, model.frames['names'], fontsize=14)
     plt.ylabel('Total-effect sensitivity')
         
     plt.show()

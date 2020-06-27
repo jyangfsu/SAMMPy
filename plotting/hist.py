@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def histplot(model, values):
+def plot(model, values):
     '''
     Create histogram plots for sample realizations
 
@@ -19,24 +19,24 @@ def histplot(model, values):
     Ret: dict, of sensitivity results
 
     '''
-    num_pars = values.shape[0]
-    N = values.shape[1]
+    num_pars = values.shape[1]
+    N = values.shape[0]
     
     # Figure configuration
     nrows = 2
     ncols = math.ceil(num_pars / 2)
     width = ncols * 5
     height = 7
-    bins = int(N / 4)
+    bins = 25
     
     # Plot the pdfs
     plt.figure(figsize=(width, height))
 
     for i in range(num_pars):
         plt.subplot(nrows, ncols, i + 1)
-        plt.hist(values[:, i], density=True, bins=N)
-        plt.xlabel(model.pars['names'][i])
-        plt.ylabel('PDF')
+        plt.hist(values[:, i], density=True, bins=bins)
+        plt.xlabel('$' + model.pars['names'][i] + '$', fontsize=14)
+        plt.ylabel('PDF', fontsize=14)
 
     plt.show()
     return 

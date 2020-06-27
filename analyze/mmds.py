@@ -6,9 +6,9 @@ Created on Thu Jun 25 20:47:34 2020
 """
 import numpy as np
 import itertools
-from ..util import ResultDict
+from ..util import results
 
-def analysis(model, Y, print_to_console=True):
+def analyze(model, Y, print_to_console=True):
     """
     Perform variance-based sensitivty analysis for each process.
 
@@ -37,7 +37,7 @@ def analysis(model, Y, print_to_console=True):
     
     # Perfrom the difference-based process sensitivty anlaysis
     if print_to_console:
-        print('Runing difference-based process sensitivy analysis...') 
+        print('Runing MMDS difference-based process sensitivy analysis...') 
     MMDS = mmds_mean_var(model, Y)
     
     # Save results to the dict
@@ -133,7 +133,7 @@ def mmds_mean_var(model, Y):
 
 def create_si_dict(npros):
     # initialize empty dict to store process sensitivity indices
-    S = ResultDict((k, np.zeros(npros)) for k in ('mean', 'variance'))
+    S = results.ResultDict((k, np.zeros(npros)) for k in ('mean', 'variance'))
     return S
             
 def print_indices(model, S):

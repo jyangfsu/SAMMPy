@@ -6,11 +6,11 @@ Created on Thu Jun 25 10:31:02 2020
 """
 import numpy as np
 import itertools
-from ..util import ResultDict
+from ..util import results
 
-def analysis(model, Y, print_to_console=True):
+def analyze(model, Y, print_to_console=True):
     """
-    Perform variance-based sensitivty analysis for each process.
+    Perform variance-based sensitivty analysis (VBSA) for each process.
 
     Parameters
     ----------
@@ -37,12 +37,12 @@ def analysis(model, Y, print_to_console=True):
     
     # Perfrom the first-order process sensitivty anlaysis
     if print_to_console:
-        print('Runing first-order process sensitivy analysis...') 
+        print('Runing VBSA first-order process sensitivy analysis...') 
     PSI = first_order_PSK(model, Y)
     
     # Perfrom the total*effect process sensitivty anlaysis
     if print_to_console:
-        print('Runing total effect process sensitivy analysis...') 
+        print('Runing VBSA total-effect process sensitivy analysis...') 
     PST = total_effect_PSTK(model, Y)
     
     # Save results to the dict
@@ -210,7 +210,7 @@ def total_effect_PSTK(model, Y):
 
 def create_si_dict(npros):
     # initialize empty dict to store process sensitivity indices
-    S = ResultDict((k, np.zeros(npros)) for k in ('PSK', 'PSTK'))
+    S = results.ResultDict((k, np.zeros(npros)) for k in ('PSK', 'PSTK'))
     return S
             
 def print_indices(model, S):
