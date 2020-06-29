@@ -28,6 +28,7 @@ To uninstall SAMMPy type:
 ## Requirements:
 
 - [NumPy](https://www.numpy.org)
+- [Numba](http://numba.pydata.org)
 - [Matplotlib](https://www.scipy.org/scipylib)
 - [SALib](https://salib.readthedocs.io/en/latest/)
     

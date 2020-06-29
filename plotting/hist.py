@@ -36,7 +36,7 @@ def plot(model, values):
         plt.subplot(nrows, ncols, i + 1)
         plt.hist(values[:, i], density=True, bins=bins)
         plt.xlabel('$' + model.pars['names'][i] + '$', fontsize=14)
-        plt.ylabel('PDF', fontsize=14)
+        plt.ylabel('$PDF$', fontsize=14)
 
     plt.show()
     return 

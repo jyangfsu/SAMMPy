@@ -8,10 +8,13 @@ assistance is welcomed. Please email us if you want to
 contribute.
 
 """
+
 __name__ = 'sammpy'
 __author__ = 'Jing Yang, and Ming Ye'
+__version__ = "0.1.0"
+__maintainer__ = "Jing Yang"
+__email__ = "mye@fsu.edu"
 
-from SALib.sample import saltelli
 
 class model():
     """
@@ -21,9 +24,9 @@ class model():
     ----------
     name : string, optional
         Name of model. 
-    frames : dict, optional
-        The system model framework contains the process names and alternative 
-        process model options
+    frames : dict, required
+        The system model framework contains the process names, the alternative 
+        process model options and the model weights
     env : dict, optional
         The constant variables used in the model simulations
     pars : dict, required
@@ -33,21 +36,24 @@ class model():
         A pre-defined system model function 
          """
 
-    def __init__(self):
-        self.name = None
-        self.frames = {}
-        self.env = {}
-        self.pars = {}
-        self.func= None
+    def __init__(self, name=None, frames={}, env={}, pars={}, func={}):
+        self.name = name
+        self.frames = frames
+        self.env = env
+        self.pars = pars
+        self.func= func
         
-    def sample(self, nobs, seed=933090936):
+   
+    def sample(self, nobs, method='saltelli', seed=933090936):
         """
         Generate the random parameter values using SALib
 
         Parameters
         ----------
-        nobs: int
+        nobs: int, required 
             Number of sample realizations 
+        method: string, optional 
+            The sampling method, default saltelli
         seed : int, optional
             The random seed
 
@@ -57,9 +63,19 @@ class model():
         scheme. The resulting matrix has size of N * D, where D is the 
         number of parameters.  
         """    
+        
+        sampling_methods_allowed = ['saltelli']
+        if method.lower() not in sampling_methods_allowed:
+            raise ValueError('Sampling method not supported: choose one of %s' 
+                             %', '.join(sampling_methods_allowed))
+            
         nvars = len(self.pars['names'])
         problem = self.pars.copy()
         problem['num_vars'] = nvars
-        values = saltelli.sample(problem, nobs, seed=seed, calc_second_order=False)[::nvars + 2, :]
+        
+        if method.lower()=='saltelli':
+            from SALib.sample import saltelli
+            values = saltelli.sample(problem, nobs, seed=seed, 
+                                     calc_second_order=False)[::nvars + 2, :]
         
         return values

@@ -29,7 +29,7 @@ def plot(model, Ret):
     plt.subplot(1, 2, 2)
     plt.bar(x, Ret['PSTK'])
     plt.xticks(x, model.frames['names'], fontsize=14)
-    plt.ylabel('Total-effect sensitivity')
+    plt.ylabel('Total-effect process sensitivity')
         
     plt.show()
     return 

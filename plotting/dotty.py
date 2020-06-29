@@ -9,12 +9,8 @@ import matplotlib.pyplot as plt
 
 def plot(model, Ret):
     '''
-    Plots mean against variance of the output difference
-
-    '''
-
-    '''
-    Create bar chart of difference-based sensitivity results
+    Carte a scatter plot display the mean against variance of the output 
+    difference
 
     Parameters
     ----------
@@ -23,9 +19,8 @@ def plot(model, Ret):
 
     '''
     plt.figure(figsize=(5, 5))
-    x = np.arange(len(model.frames['names']))
 
-    plt.scatter(Ret['mean'], Ret['variance'])
+    plt.scatter(Ret['mean'], Ret['variance'], s=40)
     for i in range(len(model.frames['names'])):
         plt.text(Ret['mean'][i], Ret['variance'][i], model.frames['names'][i],
                  fontsize=14)
@@ -33,6 +28,7 @@ def plot(model, Ret):
     plt.ylabel('Variance', fontsize=14)
     
     plt.show()
+    
     return 
 
 
