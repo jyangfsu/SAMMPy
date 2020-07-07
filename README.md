@@ -13,7 +13,7 @@ SAMMPy is a modular modelling code that can simply and efficiently vary model st
 
 SAMMPy requires **Python** 3.7 (or higher)
 
-The easiest way to install is via `pip`::
+The easiest way to install is via `pip`:
 
 To install SAMMPy type:
 
