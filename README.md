@@ -1,11 +1,13 @@
 
 ## Introduction
 
-SSAMMPy is an open-source python package for performing process sensitivity analysis under multiple models.
+SAMMPy is an open-source python package for performing process sensitivity analysis to identify controlling processes under process model uncertainty that a process may be represented by multiple models. This is to advance our understanding of the impacts of process representations on model outputs. SAMMPy can generate a range of process sensitivty indeices including:
+
+1. The first-order process sensitivity index to determine which process(es) to be prioritized for achieving the greatest reduction in predictive uncertainty [(Dai et al., 2017)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016WR019715);
+2. The total-effect process sensitivity index to determine which process(es) to be fixed and excluded from further study (Yang et al., 2020, under preparation);
+3. The mean and variacne of the output difference of the porcesses by using Multi-model difference-based sensitivity (MMDS) method to screen non-influential process(es)(Yang et al., 2020, under preparation).
 
 SAMMPy is a modular modelling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions.
-
-SAMMPy aims at contributing towards improving the quantity of sensitivity analysis with multiple models and the understanding of the complex process-based earth system models.
 
 ## Installation
 
@@ -38,13 +40,10 @@ We recommend to start by executing the workflow scripts that apply the different
 
 ## License
 
-SAMMPy is distributed under the MIT License.  
-See the [LICENSE](https://github.com/jyangfsu/SAMMPy/LICENSE) file for details.
+SAMMPy is distributed under the MIT License. See the [LICENSE](https://github.com/jyangfsu/SAMMPy/LICENSE) file for details.
 
-Copyright (c) 2012-2020 Jing Yang and Ming Ye.
-
+Copyright (c) 2020 Jing Yang and Ming Ye.
 
 ## Contributing to SAMMPy
 
-Users are welcome to submit bug reports, feature requests, and code
-contributions to this project through GitHub or mail to us at mye@fsu.edu.
+Users are welcome to submit bug reports, feature requests, and code contributions to this project through GitHub or mail to us at mye@fsu.edu.
