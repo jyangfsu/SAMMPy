@@ -1,13 +1,22 @@
 
 ## Introduction
 
-SAMMPy is an open-source python package for performing process sensitivity analysis to identify controlling processes under process model uncertainty that a process may be represented by multiple models. This is to advance our understanding of the impacts of process representations on model outputs. SAMMPy can generate a range of process sensitivty indeices including:
+SAMMPy (Sensitivity Analysis for Multiple Models using Python) is an open-source python package for performing process sensitivity analysis to identify controlling processes under process model uncertainty that a process may be represented by multiple models. This is to advance our understanding of the impacts of process representations on model outputs. SAMMPy can generate a range of process sensitivty indeices including:
 
 * The first-order process sensitivity index to determine which process(es) to be prioritized for achieving the greatest reduction in predictive uncertainty [(Dai et al., 2017)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016WR019715);
 * The total-effect process sensitivity index to determine which process(es) to be fixed and excluded from further study (Yang et al., 2020, under preparation);
 * The mean and variacne of the output difference of the porcesses by using Multi-model difference-based sensitivity (MMDS) method to screen non-influential process(es) (Yang et al., 2020, under preparation).
 
-SAMMPy is a modular modelling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions.
+SAMMPy is a modular modelling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions. The repository file contains:
+
+.
+├── build                   # Compiled files (alternatively `dist`)
+├── docs                    # Documentation files (alternatively `doc`)
+├── src                     # Source files (alternatively `lib` or `app`)
+├── test                    # Automated tests (alternatively `spec` or `tests`)
+├── tools                   # Tools and utilities
+├── LICENSE
+└── README.md
 
 ## Installation
 
