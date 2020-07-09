@@ -10,22 +10,22 @@ SAMMPy (Sensitivity Analysis for Multiple Models using Python) is an open-source
 SAMMPy is a modular modelling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions. The repository file contains:
 
 ```bash
-├── analyze                        
-│   ├── mmds.py                                     # 
-│   ├── vbsa.py                                     #
-├── examples
-│   ├── workflow_1D_groundwater_flow.ipynb          #
-│   ├── workflow_Sobol_G_star.ipynb                 #
+├── analyze                                         
+│   ├── mmds.py                                     # Code for performing mutil-model difference-based process sensitivity analysis
+│   ├── vbsa.py                                     # Code for performing variance-based process sensitivity analysis
+├── examples         
+│   ├── workflow_1D_groundwater_flow.ipynb          # Example workflow of 1D groundwater flow model
+│   ├── workflow_Sobol_G_star.ipynb                 # Example workflow of Sobol-G* function
 ├── plotting
-│   ├── bar.py                                      #
-│   ├── dotty.py                                    #
-│   ├── hist.py                                     #
+│   ├── bar.py                                      # Code for generating bar plots for first-order and total effect process sensitivity indices    
+│   ├── dotty.py                                    # Code for generating scatter plots for mean vs. variance of the output difference  
+│   ├── hist.py                                     # Code for generating histograms for sampled parameter values 
 ├── util
-│   ├── results.py                                  #
-├── __init__.py                         
+│   ├── results.py                                  # Code for postprocessing the sensitivity results into a dictionary
+├── __init__.py                                     # Common script used in the regular package, in which a model class is defined
 ├── LICENCE     
-├── README.md
-└── setup.py
+├── README.md         
+└── setup.py                                        # Centre script of and installing this package
 ```
 
 ## Installation
