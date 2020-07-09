@@ -7,7 +7,7 @@ SAMMPy (Sensitivity Analysis for Multiple Models using Python) is an open-source
 * The total-effect process sensitivity index to determine which process(es) to be fixed and excluded from further study (Yang et al., 2020, under preparation);
 * The mean and variacne of the output difference of the porcesses by using Multi-model difference-based sensitivity (MMDS) method to screen non-influential process(es) (Yang et al., 2020, under preparation).
 
-SAMMPy is a modular modelling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions. The repository file contains:
+SAMMPy is a modular modeling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions. The repository file contains:
 
 ```bash
 ├── analyze                                         
