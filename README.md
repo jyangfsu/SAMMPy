@@ -53,7 +53,7 @@ To uninstall SAMMPy type:
 - [Matplotlib](https://www.scipy.org/scipylib)
 - [SALib](https://salib.readthedocs.io/en/latest/)
     
-## Getting started with the package
+## How to use
 
 We recommend to start by executing the workflow scripts provided in the folder "examples" that apply the different process sensitivity analysis methods to test cases. 
 
