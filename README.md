@@ -30,7 +30,7 @@ SAMMPy is a modular modeling code that can simply and efficiently vary model str
 
 ## Installation
 
-SAMMPy requires **Python** 3.7 (or higher)
+SAMMPy requires **Python** 3.7 (or higher). We recommend using Anaconda on Windows or Linux platforms.
 
 The easiest way to install is via `pip`:
 
