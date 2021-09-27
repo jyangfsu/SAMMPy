@@ -65,4 +65,4 @@ Copyright (c) 2020 Jing Yang and Ming Ye.
 
 ## Contributing to SAMMPy
 
-Users are welcome to submit bug reports, feature requests, and code contributions to this project through GitHub or mail to us at jingyang@cug.edu.cn or mye@fsu.edu.
+Users are welcome to submit bug reports, feature requests, and code contributions to this project through GitHub or mail to us at jingyang@cug.edu.cn or jyang7@fsu.edu.
