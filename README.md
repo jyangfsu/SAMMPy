@@ -30,21 +30,13 @@ SAMMPy is a modular modeling code that can simply and efficiently vary model str
 
 ## Installation
 
-SAMMPy requires **Python** 3.7 (or higher). We recommend using Anaconda on Windows or Linux platforms.
+Since we have not release this package to PyPI (we will release it soon), users have to manually install WQChartPy with `setup.py` at current stage. Preliminary steps to take:
 
-The easiest way to install is via `pip`:
+    1. Download the package and extract it into a local directory
 
-To install SAMMPy type:
+    2. cd into the root directory where setup.py is located using an Anaconda Prompt
 
-    pip install sammpy
-
-To update SAMMPy type:
-
-    pip install sammpy --upgrade
-
-To uninstall SAMMPy type:
-
-    pip uninstall sammpy
+    3. Enter: python setup.py install
     
 ## Requirements:
 
