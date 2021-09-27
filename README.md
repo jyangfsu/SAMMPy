@@ -55,7 +55,7 @@ To uninstall SAMMPy type:
     
 ## Getting started with the package
 
-We recommend to start by executing the workflow scripts that apply the different process sensitivity analysis methods to test cases. 
+We recommend to start by executing the workflow scripts provided in the folder "examples" that apply the different process sensitivity analysis methods to test cases. 
 
 ## License
 
@@ -65,4 +65,4 @@ Copyright (c) 2020 Jing Yang and Ming Ye.
 
 ## Contributing to SAMMPy
 
-Users are welcome to submit bug reports, feature requests, and code contributions to this project through GitHub or mail to us at mye@fsu.edu.
+Users are welcome to submit bug reports, feature requests, and code contributions to this project through GitHub or mail to us at jingyang@cug.edu.cn or mye@fsu.edu.
