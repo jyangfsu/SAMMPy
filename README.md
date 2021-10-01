@@ -5,7 +5,7 @@ SAMMPy (Sensitivity Analysis for Multiple Models using Python) is an open-source
 
 * The first-order process sensitivity index to determine which process(es) to be prioritized for achieving the greatest reduction in predictive uncertainty [(Dai et al., 2017)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016WR019715);
 * The total-effect process sensitivity index to determine which process(es) to be fixed and excluded from further study (Yang et al., 2021, Revision submitted to Water Resources Research);
-* The mean and variacne of the output difference of the porcesses by using Multi-model absolute difference-based sensitivity (MMADS) method to screen non-influential process(es) (Yang et al., 2021, Journal of Hydrology, Major revision).
+* The mean and variacne of the output difference of the porcesses by using Multi-model absolute difference-based sensitivity (MMADS) method to screen non-influential process(es) (Yang and Ye, 2021, Journal of Hydrology, Major revision).
 
 SAMMPy is a modular modeling code that can simply and efficiently vary model structure (process representation), allowing for the generation and running of large model ensembles that vary in process representation, parameters, parameter values, and environmental conditions. The repository file contains:
 
